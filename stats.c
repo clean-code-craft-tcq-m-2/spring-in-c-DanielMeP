@@ -3,18 +3,12 @@
 /* NAN is supported */
 #endif
 
-struct Stats {
-    float average;
-    float min;
-    float max;
-};
-
 struct Stats compute_statistics(const float* numberset, int setlength)
 {
     int i;
     float sum;
     struct Stats S;
-    max_num = min_num = numberset [0];
+    max_num = min_num = *numberset [0];
     
     if(setlength == 0)
     {
@@ -23,14 +17,14 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     {
         for(i = 0; i <= setlength; i++)
         {
-            sum += numberset[i];
-            if(max_num > numberset[i])
+            sum += *numberset[i];
+            if(max_num > *numberset[i])
             {
-                max_num = numberset[i];
+                max_num = *numberset[i];
             }
-             if(min_num < numberset[i])
+             if(min_num < *numberset[i])
             {
-                min_num = numberset[i];
+                min_num = *numberset[i];
             }       
         }
 
