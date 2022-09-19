@@ -21,11 +21,11 @@ struct Stats compute_statistics(const float* numberset, int setlength)
         for(i = 0; i <= setlength; i++)
         {
             sum = sum + *numberset;
-            if(max_num > *numberset)
+            if(max_num < *numberset)
             {
                 max_num = *numberset;
             }
-             if(min_num < *numberset)
+             if(min_num > *numberset)
             {
                 min_num = *numberset;
             }       
