@@ -1,19 +1,19 @@
 #include "stats.h"
 #include "alerts.h"
 
-emailAlerter()
+void emailAlerter()
 {
   emailAlertCallCount++;
   return;
 }
 
-ledAlerter()
+void ledAlerter()
 {
   ledAlertCallCount++;
   return;
 }
 
-check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
+void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
   if(maxThreshold>computedStats.max)
   {
