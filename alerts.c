@@ -4,11 +4,13 @@
 emailAlerter()
 {
   emailAlertCallCount++;
+  return;
 }
 
 ledAlerter()
 {
   ledAlertCallCount++;
+  return;
 }
 
 check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
