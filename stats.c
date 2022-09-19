@@ -31,7 +31,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
             }       
             numberset++;
         }
-        sum = floor(sum * 1000)/1000;
+        printf("%f\n", sum );
         S.average = sum/setlength;
         S.min = min_num;
         S.max = max_num;
