@@ -6,9 +6,9 @@
 struct Stats compute_statistics(const float* numberset, int setlength)
 {
     int i;
-    float *sum;
+    float sum = 0.0;
     struct Stats S;
-    max_num = min_num = numberset [0];
+    int max_num = min_num = numberset[0];
     
     if(setlength == 0)
     {
@@ -17,7 +17,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     {
         for(i = 0; i <= setlength; i++)
         {
-            sum += &numberset[i];
+            sum = sum + numberset[i];
             if(max_num > numberset[i])
             {
                 max_num = numberset[i];
