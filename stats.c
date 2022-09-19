@@ -18,7 +18,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
         S.max = NAN;
     }else
     {
-        for(i = 0; i <= setlength; i++)
+        for(i = 0; i <= (setlength-1); i++)
         {
             sum = sum + *numberset;
             if(max_num < *numberset)
