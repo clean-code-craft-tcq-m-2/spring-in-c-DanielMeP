@@ -9,8 +9,8 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     int i;
     float sum = 0.0;
     struct Stats S;
-    float max_num = numberset;
-    float min_num = numberset;
+    float max_num = *numberset;
+    float min_num = *numberset;
     if(setlength == 0)
     {   
         S.average = NAN;
